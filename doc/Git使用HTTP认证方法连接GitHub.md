@@ -34,8 +34,10 @@ git push
 
 另外，使用HTTP连接GitHub时，使用以下命令全局让本地缓存PAC
 ```
-git config --global credential.helper store  # 永久明文缓存
+git config --global credential.helper store  # 永久磁盘明文缓存
+git config --global credential.helper cache  # 15分钟内存缓存
 ```
+以后进行提交操作的时候，就不会再次要求输入PAC了，可以在同一个项目的目录下进行基本的操作。
 
 
 
