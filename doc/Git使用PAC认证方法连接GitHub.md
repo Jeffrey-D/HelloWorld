@@ -30,6 +30,9 @@ git push
 ```
 上面可以直接使用git push的原因是这是clone的项目，在项目的根目录下已经存放好了一个隐藏文件，内包含了项目的信息，所以使用git push会直接提交clone时的默认的分支，也就是main。
 
+首次使用git push时，会让你输入PAC(`Personal Access Token`)密钥,在个人设置setting->developer settings->personal access token 下可以创建生成，每个PAC都只会在创建的时候可见，所以第一次创建的时候最好记住。
+
+
 ## Origin修改
 正常情况下，`git push` 会有两个参数，分别是远程连接名和分支名。如 `git push origin main`,意思就是将修改提交到远程连接名为origin的main分支。
 
