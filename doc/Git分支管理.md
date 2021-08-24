@@ -1,4 +1,2 @@
-# 创建新的分支
-```
-git checkout -b "newBranch"
-```
+## 创建分支
+修改dev分支内容
