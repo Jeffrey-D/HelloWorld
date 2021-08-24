@@ -41,7 +41,7 @@ git branch -d <branchName>
 # 远程仓库分支管理
 ## 创建远程分支
 ```
-git push origin oldbranch <newBranchName>
+git push origin oldbranch:<newBranchName>
 ```
 ## 建立与远程仓库某分支的链接
 ```
@@ -50,4 +50,8 @@ git checkout -b branch-name origin/branch-name
 ## 将修改提交到分支
 ```
 git push origin <branch-name>
+```
+## 删除远程分支
+```
+git push origin :<branchName>
 ```
