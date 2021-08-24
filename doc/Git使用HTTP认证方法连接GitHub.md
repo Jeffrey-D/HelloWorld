@@ -32,12 +32,21 @@ git push
 
 首次使用git push时，会让你输入PAC(`Personal Access Token`)密钥,在个人设置setting->developer settings->personal access token 下可以创建生成，每个PAC都只会在创建的时候可见，所以第一次创建的时候最好记住。
 
-另外，使用HTTP连接GitHub时，使用以下命令全局让本地缓存PAC
+# 本地缓存PAC
+## 官方推荐方法
+在最新版的Git中，已经包含了Git Credential Manager Core (GCM Core)来存储和进行身份验证，防止重复输入PAC。首次使用Git进行push操作时，会提示你输入你的PAC，或者弹出浏览器让你认证某个APP，一旦认证完成，你的PAC密钥将由GCM Core来保存管理，只要不再修改PAC，那么以后的所有的git操作都不需要再输入PAC了。
+## 个人命令缓存
+本方法不在官方的推荐方法中，但是依旧可以使用，不过需要手动输入命令。使用以下命令全局让本地缓存PAC，
 ```
 git config --global credential.helper store  # 永久磁盘明文缓存
 git config --global credential.helper cache  # 15分钟内存缓存
 ```
 以后进行提交操作的时候，就不会再次要求输入PAC了，可以在同一个项目的目录下进行基本的操作。
+
+当你不需要本地存储PAC时，可以使用以下命令取消本地的存储
+```
+git config --global 
+```
 
 
 
