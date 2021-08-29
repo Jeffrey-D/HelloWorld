@@ -46,26 +46,26 @@ ls -al ~/.ssh
 ## 验证GitHub连接
 
 1. 打开 Git Bash。
-2.  输入以下内容：
-    
+2. 输入以下内容：
+
+    ```shell
+        $ ssh -T git@github.com
+        # Attempts to ssh to GitHub
     ```
-    $ ssh -T git@github.com
-    # Attempts to ssh to GitHub
-    ```
-    
+
     您可能会看到类似如下的警告：
-    
-    ```
+
+    ```shell
     > The authenticity of host 'github.com (IP ADDRESS)' can't be established.
     > RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
     > Are you sure you want to continue connecting (yes/no)?
-    ```
-    
-3.  验证所看到消息中的指纹是否匹配 [GitHub 的 RSA 公钥指纹](https://docs.github.com/cn/github/authenticating-to-github/githubs-ssh-key-fingerprints)。 如果是，则输入 `yes`：
-    
-    ```
+        ```
+
+3. 验证所看到消息中的指纹是否匹配 [GitHub 的 RSA 公钥指纹](https://docs.github.com/cn/github/authenticating-to-github/githubs-ssh-key-fingerprints)。 如果是，则输入 `yes`：
+
+    ```shell
     > Hi username! You've successfully authenticated, but GitHub does not
     > provide shell access.
     ```
-    
-4.  验证生成的消息包含您的用户名。 如果收到 “权限被拒绝” 消息，请参阅 [“错误：权限被拒绝（公钥）”](https://docs.github.com/cn/articles/error-permission-denied-publickey)。
+
+4. 验证生成的消息包含您的用户名。 如果收到 “权限被拒绝” 消息，请参阅 [“错误：权限被拒绝（公钥）”](https://docs.github.com/cn/articles/error-permission-denied-publickey)。
